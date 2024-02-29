@@ -5,10 +5,26 @@ The goal of this project is to output an award description based on the times
 inputted by the user.
 """
 
+# Data validation function
+def get_valid_number():
+    while True:
+        user_input = input(f"Please enter the {input_text}")
+        try:
+            user_float = float(user_input)
+            if user_float > 0:
+                return user_float
+            elif user_float <= 0:
+                print ("Enter a number greater than 0.")
+        except ValueError:
+            print("Enter a valid number.")
+
 # Request completion time for each event from the user
-time1 = float(input("Time taken in minutes to complete the swimming event: "))
-time2 = float(input("Time taken in minutes to complete the cycling event: "))
-time3 = float(input("Time taken in minutes to complete the running event: "))
+input_text = "time taken in minutes to complete the swimming event: "
+time1 = get_valid_number()
+input_text = "time taken in minutes to complete the cycling event: "
+time2 = get_valid_number()
+input_text = "time taken in minutes to complete the running event: "
+time3 = get_valid_number()
 
 # Calculate total triathlon time
 triathlon_time = time1 + time2 + time3
