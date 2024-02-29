@@ -1,3 +1,10 @@
+""" Task #4 -  Logical Programming - Operators """
+
+""" 
+The goal of this project is to output an award description based on the times
+inputted by the user.
+"""
+
 # Request completion time for each event from the user
 time1 = float(input("Time taken in minutes to complete the swimming event: "))
 time2 = float(input("Time taken in minutes to complete the cycling event: "))
